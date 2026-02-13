@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.12.4 on win32)" generated="2026-02-13T19:19:29.657419" rpa="false" schemaversion="5">
+<suite id="s1" name="testRF02" source="C:\Users\ACER NitroV15\Downloads\Software-Testing-_Quiz02-main\Software-Testing-_Quiz02-main\testRF02.robot">
+<test id="s1-t1" name="TC01 GPAX มากกว่า 1.50 ต้องไม่เสี่ยง" line="16">
+<kw name="Open Browser To Risk Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:19:30.096607" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5500/risk.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-13T19:19:30.096607" elapsed="21.701794"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-13T19:19:51.798972" elapsed="0.086678"/>
+</kw>
+<status status="PASS" start="2026-02-13T19:19:30.096607" elapsed="21.789043"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:19:51.887728" level="INFO">Selecting options from selection list 'id=year' by value 1.</msg>
+<arg>id=year</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-13T19:19:51.887186" elapsed="0.102812"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:19:51.991148" level="INFO">Selecting options from selection list 'id=term' by value 2.</msg>
+<arg>id=term</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-13T19:19:51.990642" elapsed="0.181025"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:19:52.171667" level="INFO">Typing text '2.00' into text field 'id=gpax'.</msg>
+<arg>id=gpax</arg>
+<arg>2.00</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-13T19:19:52.171667" elapsed="0.152468"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:19:52.324135" level="INFO">Clicking button 'id=evaluateBtn'.</msg>
+<arg>id=evaluateBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-13T19:19:52.324135" elapsed="0.124162"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:19:52.470662" level="INFO">Current page contains text 'ไม่เสี่ยงรีไทร์'.</msg>
+<arg>ไม่เสี่ยงรีไทร์</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-13T19:19:52.449170" elapsed="0.021492"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-13T19:19:52.471703" elapsed="2.343997"/>
+</kw>
+<status status="PASS" start="2026-02-13T19:19:30.094421" elapsed="24.722034"/>
+</test>
+<test id="s1-t2" name="TC02 GPAX ต่ำกว่า 1.50 ต้องเสี่ยง" line="23">
+<kw name="Open Browser To Risk Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:19:54.819312" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5500/risk.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-13T19:19:54.819312" elapsed="21.750523"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-13T19:20:16.569835" elapsed="0.028879"/>
+</kw>
+<status status="PASS" start="2026-02-13T19:19:54.819312" elapsed="21.779402"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:20:16.603648" level="INFO">Selecting options from selection list 'id=year' by value 1.</msg>
+<arg>id=year</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-13T19:20:16.598714" elapsed="0.071809"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:20:16.672436" level="INFO">Selecting options from selection list 'id=term' by value 2.</msg>
+<arg>id=term</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-13T19:20:16.670523" elapsed="0.114357"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:20:16.786502" level="INFO">Typing text '1.00' into text field 'id=gpax'.</msg>
+<arg>id=gpax</arg>
+<arg>1.00</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-13T19:20:16.785914" elapsed="0.113539"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:20:16.899453" level="INFO">Clicking button 'id=evaluateBtn'.</msg>
+<arg>id=evaluateBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-13T19:20:16.899453" elapsed="0.099819"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-13T19:20:17.013578" level="INFO">Current page contains text 'เสี่ยงรีไทร์'.</msg>
+<arg>เสี่ยงรีไทร์</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-13T19:20:16.999272" elapsed="0.014306"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-13T19:20:17.013578" elapsed="2.279107"/>
+</kw>
+<status status="PASS" start="2026-02-13T19:19:54.817786" elapsed="24.474899"/>
+</test>
+<status status="PASS" start="2026-02-13T19:19:29.658730" elapsed="49.636211"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testRF02" id="s1" pass="2" fail="0" skip="0">testRF02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

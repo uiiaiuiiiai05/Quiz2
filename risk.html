@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Risk Evaluation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        select, input, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>ประเมินความเสี่ยงรีไทร์</h2>
+
+    <label>ชั้นปี</label>
+    <select id="year">
+        <option value="1">ปี 1</option>
+    </select>
+
+    <label>เทอม</label>
+    <select id="term">
+        <option value="1">เทอม 1</option>
+        <option value="2">เทอม 2</option>
+    </select>
+
+    <label>GPAX</label>
+    <input type="number" id="gpax" step="0.01" required>
+
+    <button id="evaluateBtn">ประเมิน</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+document.getElementById("evaluateBtn").addEventListener("click", function() {
+
+    var year = document.getElementById("year").value;
+    var term = document.getElementById("term").value;
+    var gpax = document.getElementById("gpax").value;
+    var result = document.getElementById("result");
+
+    if (gpax === "") {
+        result.innerHTML = "กรุณากรอก GPAX";
+        result.style.color = "orange";
+        return;
+    }
+
+    gpax = parseFloat(gpax);
+
+    if (year === "1" && term === "2") {
+        if (gpax >= 1.50) {
+            result.innerHTML = "ไม่เสี่ยงรีไทร์";
+            result.style.color = "green";
+        } else {
+            result.innerHTML = "เสี่ยงรีไทร์";
+            result.style.color = "red";
+        }
+    } else {
+        result.innerHTML = "กรุณาเลือก ปี 1 เทอม 2";
+        result.style.color = "black";
+    }
+
+});
+</script>
+
+</body>
+</html>
